@@ -1,0 +1,173 @@
+html * {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  margin: auto;
+  margin-top: 15px;
+  width: 90%;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100px 230px 5fr 1fr;
+
+    grid-template-areas:
+     "header header"
+     "banner banner"
+     "sidebar main"
+     "footer footer";
+}
+
+.wrapperNoBanner {
+  margin: auto;
+  margin-top: 15px;
+  width: 90%;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100px 5fr 1fr;
+
+    grid-template-areas:
+     "header header"
+     "main main"
+     "footer footer";
+}
+
+* > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+* > li {
+  list-style-type: none;
+}
+
+#header {
+  background-color: #011627;
+  border-radius: 5px 5px 0 0;
+  padding: 0 5px;
+  grid-area: header;
+  margin: 0 12px;
+
+  color: white;
+
+  display: grid;
+  grid-template-columns:  1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "... menu-buttons";
+}
+
+#banner {
+    grid-area: banner;
+    background-color: #FF3366;
+    text-align: center;
+    line-height: 230px;
+
+}
+
+#banner > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#menuButtons {
+  grid-area: menu-buttons;
+  margin: auto;
+  margin-right: 0;
+  border-radius: 3px;
+}
+
+#menuButtons button {
+  background-color: transparent;
+  border: 3px solid #a187b1;
+  border-radius: 3px;
+  font-size: 12pt;
+  margin: 0 10px;
+  color: #a187b1;
+  cursor: pointer;
+}
+
+#menuButtons > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#sidebar {
+  background-color: #08B2E3;
+  grid-area: sidebar;
+  box-shadow: -5px -8px 20px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 13px 13px 0 0;
+  margin-left: 12px;
+
+  /*display: grid;
+  grid-template-columns:  1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+  "player"
+  "sidesearch";*/
+}
+
+#player {
+  grid-area: player;
+  background-color: #FFBF00;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  margin-top: -25px;
+}
+
+#sidesearch {
+    grid-area: sidesearch;
+    width: 80%;
+    margin: 10px auto;
+}
+
+#itemsearch {
+    width:85%;
+    font-size: 12pt;
+    font-family: sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.helptext {
+  color: #616161;
+  margin: 20%;
+  border-style: dashed;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#main {
+  background-color: #F6F7F8;
+  padding: 10px 0 10px 0;
+  margin: 0 12px;
+  grid-area: main;
+  text-align: center;
+}
+
+#itemresult > #icon::before {
+  content: "~";
+  z-index: 99;
+  background-color: #011627;
+  color: #fff;
+  background-size: 23px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin-left: -130px;
+}
+
+
+#footer {
+  background-color: #090908;
+  color: white;
+  grid-area: footer;
+  text-align: center;
+  padding: 10px;
+}
